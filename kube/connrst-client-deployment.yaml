@@ -4,16 +4,17 @@ kind: Deployment
 metadata:
   name: client
   labels:
-    app: client
+    app: connrst-client
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: client
+      app: connrst-client
   template:
     metadata:
       labels:
-        app: client
+        app: connrst-client
+        log_group_name: connrst-client
     spec:
       containers:
       - name: client-connection-reset

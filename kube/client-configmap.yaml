@@ -12,5 +12,6 @@ data:
     sleep 10
 
     while true; do
+      echo 'starting curl' >&2
       curl -o file.txt $1
     done

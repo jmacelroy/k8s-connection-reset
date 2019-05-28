@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: nginx
   labels:
-    app: nginx
+    app: connrst-nginx
 spec:
   sessionAffinity: ClientIP
   ports:
@@ -13,4 +13,4 @@ spec:
       targetPort: 80
       protocol: TCP
   selector:
-    app: nginx
+    app: connrst-nginx
